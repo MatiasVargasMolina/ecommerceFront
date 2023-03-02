@@ -4,6 +4,8 @@ import {apiSlice} from "../slices/api/apiSlice"
 export const store= configureStore({
     reducer:{
         counter: counterSlice.reducer,
-        api: apiSlice.reducer,
-    }
+        [apiSlice.reducerPath]: apiSlice.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
 })

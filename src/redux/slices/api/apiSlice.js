@@ -10,6 +10,7 @@ export const apiSlice=createApi({
                 url:"/api/auth/signin",
                 method:"Post",
                 body:newTask,
+                credentials: "include"
             })
         })
     })

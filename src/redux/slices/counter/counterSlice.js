@@ -4,11 +4,11 @@ import { createSlice } from '@reduxjs/toolkit'
 export const counterSlice = createSlice({
   name: 'counter',
   initialState:{
-    counter:10
+    counter:{usermane:"null",id:0}
   },
   reducers: {
-    increment: (state) => {
-      state.counter += 1
+    increment: (state,action) => {
+      state.counter=action.payload
     },
   },
 })

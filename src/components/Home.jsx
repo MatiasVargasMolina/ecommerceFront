@@ -5,7 +5,7 @@ function Home() {
     return (
         <div>
             <p> </p>
-            <button onClick={()=>dispatch(increment())}>Obtener productos</button>
+            <button onClick={()=>dispatch(increment({username:"hola",id:0}))}>Obtener productos</button>
         </div>
     );
 }
