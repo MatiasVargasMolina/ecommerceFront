@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useCreateTaskMutation} from "../redux/slices/api/apiSlice"
+
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from '../redux/slices/counter'
 import { useNavigate } from "react-router-dom";
@@ -32,7 +33,7 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function Login() {
   const [createTask,result]=useCreateTaskMutation();
   const dispatch = useDispatch();
   const navigate=useNavigate();
@@ -49,6 +50,7 @@ export default function SignIn() {
   if(userName.username!=null){
     navigate("/dashboard")
   }
+    
   else{
     return (
       <ThemeProvider theme={theme}>

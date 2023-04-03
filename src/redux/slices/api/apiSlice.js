@@ -12,7 +12,15 @@ export const apiSlice=createApi({
                 body:newTask,
                 credentials: "include"
             })
-        })
+        }),
+        createLogout: builder.mutation({
+            query:()=>({
+                url:"api/auth/signout",
+                method:"Post",
+                body:{},
+                credentials: "include"
+            })
+        }),
     })
 })
-export const {useCreateTaskMutation} = apiSlice;
+export const {useCreateTaskMutation,useCreateLogoutMutation} = apiSlice;
