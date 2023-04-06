@@ -42,7 +42,7 @@ export default function ButtonAppBar() {
               </IconButton>
             </Tooltip>
           <h1>{userName} </h1>
-          <Button color="inherit" onClick={} >Logout</Button>
+          <Button color="inherit" >Logout</Button>
         </Toolbar>
       </AppBar>
     </Box></>
